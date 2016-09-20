@@ -9,6 +9,11 @@ function ($scope) {
   $scope.totalValue = 0;
 
   $scope.doSomething = function () {
+    console.log("lunch items = " + $scope.lunchItems);
+    if($scope.lunchItems == null || $scope.lunchItems.length < 1) {
+      $scope.message = "Please enter data first!";
+    }
+    else {
           var items =$scope.lunchItems.split(",");
           console.log(items);
           if(items.length < 4) {
@@ -19,9 +24,8 @@ function ($scope) {
         }
           $scope.lunchItems = null;
       }
-  
+}
 });
 
 
 })();
-
