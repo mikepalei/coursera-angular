@@ -14,7 +14,6 @@ function ($scope) {
     }
     else {
           var items =$scope.lunchItems.split(",");
-          console.log(items);
           if(items.length < 4) {
           $scope.message = "Enjoy!";
         }
