@@ -1,4 +1,4 @@
 <li ng-repeat="item in menu.foundItems">
-{{item.name}}, {{item.description}}
+'('+{{item.short_name}}+')', {{item.name}}, {{item.description}}
 <button ng-click="menu.removeItem($index);">Don't want this one</button>
 </li>
