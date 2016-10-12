@@ -28,6 +28,7 @@ list1.errorMessage = function() {
 BoughtListController.$inject = ['ShoppingListService'];
 function BoughtListController(ShoppingListService) {
   var list2 = this;
+  console.log("I am within BoughtListController");
   list2.items = ShoppingListService.getItems('list2');
   list2.errorMessage = function() {
     var message = "";

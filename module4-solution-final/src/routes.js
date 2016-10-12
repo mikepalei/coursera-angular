@@ -16,32 +16,32 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
   // Home page
   .state('home', {
     url: '/',
-    templateUrl: 'src/menu/templates/home.template.html'
+    templateUrl: 'src/templates/home.template.html'
   })
 
 
   .state('categories', {
        url: '/categories',
-       templateUrl: 'src/menu/templates/main-menu.template.html',
+       templateUrl: 'src/categories.html',
        controller: 'CategoriesController as categories',
        resolve: {
-         items: ['MenuDataService', function (MenuDataService) {
+         catNames: ['MenuDataService', function (MenuDataService) {
            return MenuDataService.getAllCategories();
          }]
        }
      })
 
-
 .state('items', {
      url: '/items/{category}',
-     templateUrl: 'src/menu/templates/items.html',
+     templateUrl: 'src/items.html',
      controller: 'ItemsController as items',
      resolve: {
-       categoryItems: ['MenuDataService', '$stateParams', function (MenuDataService, $stateParams) {
+       itemNames: ['MenuDataService', '$stateParams', function (MenuDataService, $stateParams) {
          return MenuDataService.getItemsForCategory($stateParams.category);
        }]
      }
-   });
+   })
+   ;
 
 }
 
