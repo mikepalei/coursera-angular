@@ -10,7 +10,7 @@
     <span ng-if="(signupForm.lastName.$error.required || signupForm.lastName.$error.minlength || signupForm.lastName.$error.maxlength)&& signupForm.lastName.$touched">
       Last name is a required field and should be mininum 4 characters and maximum 10 characters long</span><br/>
 
-    E-mail: <input type="email" name="email" required ng-pattern="/^[_a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]*\.([a-z]{2,4})$/" ng-model="signupCtrl.user.email" style="color:black"/><br />
+    E-mail: <input type="email" name="email" required ng-pattern="/^[_a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]*\.([a-z]{2,4})\.([a-z]{2,4})$/" ng-model="signupCtrl.user.email" style="color:black"/><br />
     <span ng-if="(signupForm.email.$error.required || signupForm.email.$error.pattern) && signupForm.email.$touched">E-mail is a required field and should be a valid email address</span><br/>
 
     Phone number: <input type="text" name="phoneNumber" required ng-pattern="/\+\d{1,3}\s+\d{1,3}\s+\d{3}\s+\d{2}\s+\d{2}/"ng-model="signupCtrl.user.phone" style="color:black"/><br/>
