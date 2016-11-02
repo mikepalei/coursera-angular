@@ -1,0 +1,15 @@
+<h1>Welcome to the info page!!!</h1>
+<div class="container">
+  <form ng-if="myInfoCtrl.data" novalidate class="simple-form" name="signupForm">
+    First name: <input type="text" name="lastName" ng-model="myInfoCtrl.data.firstName" readonly="true" style="color:black"/><br/>
+    Last name: <input type="text" name="lastName" ng-model="myInfoCtrl.data.lastName" readonly="true" style="color:black"/><br/>
+    E-mail: <input type="email" name="email" readonly ng-model="myInfoCtrl.data.email" style="color:black"/><br />
+    Phone number: <input type="text" name="phoneNumber" readonly ng-model="myInfoCtrl.data.phone" style="color:black"/><br/>
+    You favourite item on our menu: <input type="text" name="favItem" required ng-model="myInfoCtrl.data.favMenuItem.name" style="color:black"/>
+  </br>
+</br>
+    <img width="200" height="200" ng-src="images/menu/{{myInfoCtrl.itemName}}/{{myInfoCtrl.itemName}}.jpg" alt="{{myInfoCtrl.data.favMenuItem.name}}">
+  </form>
+  <a ng-show="!myInfoCtrl.data" ui-sref="public.signup">You are not signed up yet. Sign up now</a>
+
+</div>
